@@ -1,15 +1,15 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { api } from '@/lib/api';
+import { useAuth } from '@/context/auth';
 
 export default function DebugPage() {
-  const [info, setInfo] = useState<any>({ testing: true });
+  const { login, loading } = useAuth();
+  const [info, setInfo] = useState<any>({ loading });
 
   useEffect(() => {
-    // Test login using the actual api.ts module
-    api.auth.login({ email: 'mannymusic000@gmail.com', password: 'primelock123' })
-      .then(data => setInfo({ status: 'LOGIN OK', data }))
-      .catch(err => setInfo({ status: 'LOGIN FAILED', error: err.message }));
+    login('mannymusic000@gmail.com', 'primelock123')
+      .then(() => setInfo({ status: 'AUTH LOGIN OK' }))
+      .catch(err => setInfo({ status: 'AUTH LOGIN FAILED', error: err.message }));
   }, []);
 
   return (
