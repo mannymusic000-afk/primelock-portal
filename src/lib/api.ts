@@ -1,6 +1,4 @@
-const API_BASE = typeof window !== 'undefined' && window.location.hostname !== 'localhost'
-  ? '/api/primelock'
-  : 'http://localhost:3333';
+const API_BASE = 'https://primelock-api.onrender.com';
 
 async function request<T>(
   path: string,
