@@ -101,7 +101,7 @@ export default function DashboardPage() {
                 <p style={{ fontSize: 11, color: '#444460', textTransform: 'uppercase', letterSpacing: '0.08em', margin: 0 }}>
                   This Month
                 </p>
-                <Link href="#" style={{
+                <Link href="/dashboard/upgrade" style={{
                   fontSize: 10, color: '#F5A623', textDecoration: 'none', fontWeight: 700,
                   background: '#F5A62312', border: '1px solid #F5A62325', padding: '3px 8px', borderRadius: 20,
                 }}>
