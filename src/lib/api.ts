@@ -1,4 +1,4 @@
-const API_BASE = 'https://primelock-api.onrender.com';
+const API_BASE = 'https://api.primelock.theprimis.org';
 
 async function request<T>(
   path: string,
