@@ -13,7 +13,7 @@ export default function LandingPage() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
           <a href="#features" style={{ fontSize: 14, color: '#555570', textDecoration: 'none' }}>Features</a>
           <a href="#pricing" style={{ fontSize: 14, color: '#555570', textDecoration: 'none' }}>Pricing</a>
-          <a href="#docs" style={{ fontSize: 14, color: '#555570', textDecoration: 'none' }}>Docs</a>
+          <Link href="/docs" style={{ fontSize: 14, color: '#555570', textDecoration: 'none' }}>Docs</Link>
           <Link href="/login" style={{
             fontSize: 14, color: '#555570', textDecoration: 'none',
           }}>Sign in</Link>
@@ -58,14 +58,14 @@ export default function LandingPage() {
           }}>
             Start for free →
           </Link>
-          <a href="#docs" style={{
+          <Link href="/docs" style={{
             background: '#0f0f1a', border: '1px solid #1e1e36',
             color: '#888898', fontWeight: 600, fontSize: 16,
             padding: '16px 36px', borderRadius: 14, textDecoration: 'none',
             display: 'inline-block',
           }}>
             View the docs
-          </a>
+          </Link>
         </div>
       </section>
 
