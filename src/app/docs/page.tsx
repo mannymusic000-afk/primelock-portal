@@ -265,11 +265,27 @@ if (status != PrimeLockLicense::Status::Valid) {
           <p style={S.p}>
             The PrimeLock License Manager is a native desktop app for Mac and Windows. Your customers use it to activate and manage their licenses.
           </p>
-          <div style={S.note}>
-            <p style={{ fontSize: 13, color: '#F5A623', margin: '0 0 4px', fontWeight: 700 }}>Coming soon</p>
-            <p style={{ fontSize: 13, color: '#888898', margin: 0 }}>
-              Download links for Mac (.dmg) and Windows (.exe) will be available here shortly.
-            </p>
+          <div style={{ display: 'flex', gap: 12, margin: '20px 0' }}>
+            <a href="https://github.com/mannymusic000-afk/primelock-portal/releases/download/v1.0.0/PrimeLock.Manager_1.0.0_x64.dmg"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 10,
+                background: 'linear-gradient(135deg, #F5A623, #e8940f)',
+                color: '#000', fontWeight: 700, fontSize: 14,
+                padding: '14px 24px', borderRadius: 12, textDecoration: 'none',
+              }}>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M8 1V11M4 8L8 12L12 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M2 14H14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+              Download for Mac
+            </a>
+            <div style={{
+              display: 'inline-flex', alignItems: 'center', gap: 10,
+              background: '#141428', border: '1px solid #1e1e36',
+              color: '#444460', fontSize: 14, padding: '14px 24px', borderRadius: 12,
+            }}>
+              Windows — coming soon
+            </div>
           </div>
 
           {/* ── APP FLOW ── */}
