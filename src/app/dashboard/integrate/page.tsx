@@ -72,7 +72,11 @@ export default function IntegratePage() {
 
         {/* SDK */}
         <ISection title="C++ / JUCE SDK" icon="🧩">
-          <p style={P}>Copy <code style={Code}>PrimeLockLicense.h</code> and <code style={Code}>PrimeLockLicense.cpp</code> from the SDK folder into your JUCE project. Get your Product ID and Public Key from the product page, then verify at startup:</p>
+          <p style={P}>Download the SDK and copy <code style={Code}>PrimeLockLicense.h</code> and <code style={Code}>PrimeLockLicense.cpp</code> into your JUCE project. Get your Product ID and Public Key from the product page, then verify at startup:</p>
+          <a href="https://github.com/mannymusic000-afk/primelock-sdk" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#141428', border: '1px solid #1e1e36', color: '#e8e8f0', fontSize: 13, fontWeight: 600, padding: '10px 18px', borderRadius: 10, textDecoration: 'none', marginBottom: 14 }}>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1C3.69 1 1 3.69 1 7c0 2.65 1.72 4.9 4.1 5.69.3.06.41-.13.41-.29v-1.02c-1.67.36-2.02-.8-2.02-.8-.27-.69-.67-.87-.67-.87-.55-.37.04-.36.04-.36.6.04.92.62.92.62.54.92 1.41.65 1.75.5.05-.39.21-.65.38-.8-1.33-.15-2.73-.67-2.73-2.96 0-.65.23-1.19.62-1.6-.06-.15-.27-.76.06-1.58 0 0 .51-.16 1.66.62A5.8 5.8 0 0 1 7 4.82c.51 0 1.03.07 1.51.2 1.15-.78 1.66-.62 1.66-.62.33.82.12 1.43.06 1.58.38.41.62.95.62 1.6 0 2.3-1.4 2.8-2.74 2.95.22.19.41.56.41 1.13v1.67c0 .16.11.35.41.29C11.28 11.9 13 9.65 13 7c0-3.31-2.69-6-6-6Z" fill="currentColor"/></svg>
+            github.com/mannymusic000-afk/primelock-sdk
+          </a>
           <pre style={Pre}>{`#include "PrimeLockLicense.h"
 
 const char* PUBLIC_KEY = "-----BEGIN PUBLIC KEY-----\\n...\\n-----END PUBLIC KEY-----";
