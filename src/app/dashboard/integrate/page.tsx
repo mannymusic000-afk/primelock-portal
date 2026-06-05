@@ -43,21 +43,21 @@ export default function IntegratePage() {
 
         {/* Selar */}
         <ISection title="Selar Webhook" icon="🛒">
-          <p style={P}>In your Selar product settings, go to <strong style={{ color: '#e8e8f0' }}>Webhook</strong> and paste this URL. Replace <Code>YOUR_PRODUCT_SLUG</Code> with your product slug (e.g. <Code>cue-engine</Code>).</p>
+          <p style={P}>In your Selar product settings, go to <strong style={{ color: '#e8e8f0' }}>Webhook</strong> and paste this URL. Replace <code style={Code}>YOUR_PRODUCT_SLUG</Code> with your product slug (e.g. <Code>cue-engine</code>).</p>
           <CopyBox label="Selar Webhook URL" value={selarUrl} copied={copied === 'selar'} onCopy={() => copy('selar', selarUrl)} />
           <Note>When a sale is confirmed, Selar pings this URL → PrimeLock issues a signed license key → emails it to the buyer automatically.</Note>
         </ISection>
 
         {/* Flutterwave */}
         <ISection title="Flutterwave Webhook" icon="💳">
-          <p style={P}>In Flutterwave → Settings → Webhooks, paste this URL. Replace <Code>YOUR_PRODUCT_SLUG</Code> with your product slug.</p>
+          <p style={P}>In Flutterwave → Settings → Webhooks, paste this URL. Replace <code style={Code}>YOUR_PRODUCT_SLUG</code> with your product slug.</p>
           <CopyBox label="Flutterwave Webhook URL" value={flwUrl} copied={copied === 'flw'} onCopy={() => copy('flw', flwUrl)} />
-          <Note>Also copy the Webhook Hash from Flutterwave and add it to your Render environment as <Code>FLW_WEBHOOK_HASH</Code>.</Note>
+          <Note>Also copy the Webhook Hash from Flutterwave and add it to your Render environment as <code style={Code}>FLW_WEBHOOK_HASH</code>.</Note>
         </ISection>
 
         {/* SDK */}
         <ISection title="C++ / JUCE SDK" icon="🧩">
-          <p style={P}>Copy <Code>PrimeLockLicense.h</Code> and <Code>PrimeLockLicense.cpp</Code> from the SDK folder into your JUCE project. Get your Product ID and Public Key from the product page, then verify at startup:</p>
+          <p style={P}>Copy <code style={Code}>PrimeLockLicense.h</Code> and <Code>PrimeLockLicense.cpp</code> from the SDK folder into your JUCE project. Get your Product ID and Public Key from the product page, then verify at startup:</p>
           <pre style={Pre}>{`#include "PrimeLockLicense.h"
 
 const char* PUBLIC_KEY = "-----BEGIN PUBLIC KEY-----\\n...\\n-----END PUBLIC KEY-----";
