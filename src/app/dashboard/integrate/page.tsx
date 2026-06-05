@@ -14,9 +14,10 @@ export default function IntegratePage() {
     setTimeout(() => setCopied(null), 1800);
   };
 
-  const apiKey  = developer?.api_key ?? 'PL-your-api-key';
-  const selarUrl = `https://api.primelock.theprimis.org/webhooks/selar?api_key=${apiKey}&product=YOUR_PRODUCT_SLUG`;
-  const flwUrl   = `https://api.primelock.theprimis.org/webhooks/flutterwave?api_key=${apiKey}&product=YOUR_PRODUCT_SLUG`;
+  const apiKey     = developer?.api_key ?? 'PL-your-api-key';
+  const selarUrl   = `https://api.primelock.theprimis.org/webhooks/selar?api_key=${apiKey}&product=YOUR_PRODUCT_SLUG`;
+  const flwUrl     = `https://api.primelock.theprimis.org/webhooks/flutterwave?api_key=${apiKey}&product=YOUR_PRODUCT_SLUG`;
+  const genericUrl = `https://api.primelock.theprimis.org/webhooks/generic?api_key=${apiKey}&product=YOUR_PRODUCT_SLUG`;
 
   return (
     <div style={{ minHeight: '100vh', background: '#07070f', color: '#e8e8f0', fontFamily: "'SF Pro Display', 'Inter', system-ui, sans-serif" }}>
@@ -53,6 +54,20 @@ export default function IntegratePage() {
           <p style={P}>In Flutterwave → Settings → Webhooks, paste this URL. Replace <code style={Code}>YOUR_PRODUCT_SLUG</code> with your product slug.</p>
           <CopyBox label="Flutterwave Webhook URL" value={flwUrl} copied={copied === 'flw'} onCopy={() => copy('flw', flwUrl)} />
           <Note>Also copy the Webhook Hash from Flutterwave and add it to your Render environment as <code style={Code}>FLW_WEBHOOK_HASH</code>.</Note>
+        </ISection>
+
+        {/* Generic */}
+        <ISection title="Any Other Platform" icon="🌐">
+          <p style={P}>Using Gumroad, Paystack, Stripe, or anything else? Use the generic webhook. Configure your platform to send a POST request to this URL when a sale is confirmed:</p>
+          <CopyBox label="Generic Webhook URL" value={genericUrl} copied={copied === 'generic'} onCopy={() => copy('generic', genericUrl)} />
+          <p style={{ ...P, marginTop: 12 }}>Your platform must send a JSON body with at least <code style={Code}>customer_email</code>:</p>
+          <pre style={Pre}>{`// Minimum required
+{
+  "customer_email": "buyer@example.com",
+  "customer_name":  "John Doe",    // optional
+  "order_id":       "order-123"    // optional, used for dedup
+}`}</pre>
+          <Note>PrimeLock will issue the license key and email it to the customer automatically — regardless of which platform triggered it.</Note>
         </ISection>
 
         {/* SDK */}
