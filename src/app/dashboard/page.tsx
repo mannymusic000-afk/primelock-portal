@@ -64,6 +64,9 @@ export default function DashboardPage() {
           </span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+          <Link href="/dashboard/bundles" style={{ fontSize: 12, color: '#555570', textDecoration: 'none', padding: '7px 12px', background: '#0f0f1a', border: '1px solid #141428', borderRadius: 8 }}>
+            🎁 Bundles
+          </Link>
           <Link href="/dashboard/integrate" style={{ fontSize: 12, color: '#555570', textDecoration: 'none', padding: '7px 12px', background: '#0f0f1a', border: '1px solid #141428', borderRadius: 8 }}>
             🧩 Integrate
           </Link>
