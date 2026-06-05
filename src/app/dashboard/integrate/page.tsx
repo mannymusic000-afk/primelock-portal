@@ -56,6 +56,28 @@ export default function IntegratePage() {
           <Note>Also copy the Webhook Hash from Flutterwave and add it to your Render environment as <code style={Code}>FLW_WEBHOOK_HASH</code>.</Note>
         </ISection>
 
+        {/* Subscriptions */}
+        <ISection title="Subscriptions & Subscribe-to-Own" icon="🔄">
+          <p style={P}>When a customer's recurring payment goes through, call the extend endpoint to push their expiry forward. When they've paid enough to own it, upgrade them to perpetual.</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div>
+              <p style={{ fontSize: 11, color: '#444460', textTransform: 'uppercase' as const, letterSpacing: '0.08em', margin: '0 0 6px' }}>Monthly renewal</p>
+              <pre style={Pre}>{`POST https://api.primelock.theprimis.org/licenses/:id/extend
+Authorization: Bearer YOUR_JWT_TOKEN
+
+{ "days": 30 }`}</pre>
+            </div>
+            <div>
+              <p style={{ fontSize: 11, color: '#444460', textTransform: 'uppercase' as const, letterSpacing: '0.08em', margin: '0 0 6px' }}>Subscribe-to-own threshold reached</p>
+              <pre style={Pre}>{`POST https://api.primelock.theprimis.org/licenses/:id/extend
+Authorization: Bearer YOUR_JWT_TOKEN
+
+{ "upgrade_to_perpetual": true }`}</pre>
+            </div>
+          </div>
+          <Note>PrimeLock emails the customer automatically on both actions — renewal confirmation or ownership upgrade.</Note>
+        </ISection>
+
         {/* Generic */}
         <ISection title="Any Other Platform" icon="🌐">
           <p style={P}>Using Gumroad, Paystack, Stripe, or anything else? Use the generic webhook. Configure your platform to send a POST request to this URL when a sale is confirmed:</p>
