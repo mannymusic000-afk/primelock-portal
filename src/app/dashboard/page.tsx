@@ -74,11 +74,21 @@ export default function DashboardPage() {
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '40px 40px' }}>
 
         {/* Header */}
-        <div style={{ marginBottom: 36 }}>
-          <h1 style={{ fontSize: 28, fontWeight: 800, color: '#fff', letterSpacing: '-0.5px', margin: '0 0 6px' }}>
-            Welcome back, {developer?.name?.split(' ')[0]}
-          </h1>
-          <p style={{ fontSize: 14, color: '#444460', margin: 0 }}>Manage your products and licenses</p>
+        <div style={{ marginBottom: 36, display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+          <div>
+            <h1 style={{ fontSize: 28, fontWeight: 800, color: '#fff', letterSpacing: '-0.5px', margin: '0 0 6px' }}>
+              Welcome back, {developer?.name?.split(' ')[0]}
+            </h1>
+            <p style={{ fontSize: 14, color: '#444460', margin: 0 }}>Manage your products and licenses</p>
+          </div>
+          <Link href="/dashboard/integrate" style={{
+            display: 'inline-flex', alignItems: 'center', gap: 8,
+            background: '#0f0f1a', border: '1px solid #1e1e36',
+            color: '#888898', fontSize: 13, fontWeight: 600,
+            padding: '10px 18px', borderRadius: 10, textDecoration: 'none',
+          }}>
+            🧩 Integration Guide
+          </Link>
         </div>
 
         {/* Stats + Usage row */}
