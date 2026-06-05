@@ -43,7 +43,7 @@ export default function IntegratePage() {
 
         {/* Selar */}
         <ISection title="Selar Webhook" icon="🛒">
-          <p style={P}>In your Selar product settings, go to <strong style={{ color: '#e8e8f0' }}>Webhook</strong> and paste this URL. Replace <code style={Code}>YOUR_PRODUCT_SLUG</Code> with your product slug (e.g. <Code>cue-engine</code>).</p>
+          <p style={P}>In your Selar product settings, go to <strong style={{ color: '#e8e8f0' }}>Webhook</strong> and paste this URL. Replace <code style={Code}>YOUR_PRODUCT_SLUG</code> with your product slug (e.g. <code style={Code}>cue-engine</code>).</p>
           <CopyBox label="Selar Webhook URL" value={selarUrl} copied={copied === 'selar'} onCopy={() => copy('selar', selarUrl)} />
           <Note>When a sale is confirmed, Selar pings this URL → PrimeLock issues a signed license key → emails it to the buyer automatically.</Note>
         </ISection>
@@ -57,7 +57,7 @@ export default function IntegratePage() {
 
         {/* SDK */}
         <ISection title="C++ / JUCE SDK" icon="🧩">
-          <p style={P}>Copy <code style={Code}>PrimeLockLicense.h</Code> and <Code>PrimeLockLicense.cpp</code> from the SDK folder into your JUCE project. Get your Product ID and Public Key from the product page, then verify at startup:</p>
+          <p style={P}>Copy <code style={Code}>PrimeLockLicense.h</code> and <code style={Code}>PrimeLockLicense.cpp</code> from the SDK folder into your JUCE project. Get your Product ID and Public Key from the product page, then verify at startup:</p>
           <pre style={Pre}>{`#include "PrimeLockLicense.h"
 
 const char* PUBLIC_KEY = "-----BEGIN PUBLIC KEY-----\\n...\\n-----END PUBLIC KEY-----";
