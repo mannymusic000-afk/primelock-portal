@@ -14,6 +14,7 @@ export default function LandingPage() {
           <a href="#features" style={{ fontSize: 14, color: '#555570', textDecoration: 'none' }}>Features</a>
           <a href="#pricing" style={{ fontSize: 14, color: '#555570', textDecoration: 'none' }}>Pricing</a>
           <Link href="/docs" style={{ fontSize: 14, color: '#555570', textDecoration: 'none' }}>Docs</Link>
+          <Link href="/offline" style={{ fontSize: 14, color: '#555570', textDecoration: 'none' }}>Offline Activation</Link>
           <Link href="/login" style={{
             fontSize: 14, color: '#555570', textDecoration: 'none',
           }}>Sign in</Link>
