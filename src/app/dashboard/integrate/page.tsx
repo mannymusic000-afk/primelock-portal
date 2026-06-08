@@ -34,7 +34,19 @@ export default function IntegratePage() {
       <div style={{ maxWidth: 820, margin: '0 auto', padding: '48px 40px' }}>
         <p style={{ fontSize: 12, color: '#444460', textTransform: 'uppercase' as const, letterSpacing: '0.1em', margin: '0 0 10px' }}>Integration Guide</p>
         <h1 style={{ fontSize: 32, fontWeight: 900, color: '#fff', letterSpacing: '-1px', margin: '0 0 8px' }}>Set up PrimeLock</h1>
-        <p style={{ fontSize: 15, color: '#555570', margin: '0 0 48px' }}>Your API key and everything you need to go live.</p>
+        <p style={{ fontSize: 15, color: '#555570', margin: '0 0 24px' }}>Your API key and everything you need to go live.</p>
+
+        {/* PDF Guide banner */}
+        <a href="/PrimeLock-Developer-Guide.pdf" target="_blank" rel="noopener noreferrer"
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
+            background: 'linear-gradient(135deg, #F5A62312, #29C6D912)', border: '1px solid #F5A62330',
+            borderRadius: 14, padding: '16px 20px', marginBottom: 40, textDecoration: 'none' }}>
+          <div>
+            <p style={{ fontSize: 14, fontWeight: 700, color: '#F5A623', margin: '0 0 2px' }}>📘 Developer Guide (PDF)</p>
+            <p style={{ fontSize: 12, color: '#888070', margin: 0 }}>Complete walkthrough — setup, SDK, webhooks, pricing models, API reference.</p>
+          </div>
+          <span style={{ fontSize: 13, fontWeight: 700, color: '#000', background: 'linear-gradient(135deg, #F5A623, #e8940f)', padding: '9px 16px', borderRadius: 10, whiteSpace: 'nowrap' }}>⬇ Download</span>
+        </a>
 
         {/* API Key */}
         <ISection title="Your API Key" icon="🔑">

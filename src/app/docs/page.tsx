@@ -111,6 +111,15 @@ export default function DocsPage() {
             </div>
           </DocCard>
 
+          <DocCard step="4" title="Full Developer Guide (PDF)">
+            <p style={P}>Prefer a complete walkthrough? Download the detailed developer guide — covering setup, the SDK, webhooks, pricing models, and the full API reference.</p>
+            <div style={{ marginTop: 16 }}>
+              <a href="/PrimeLock-Developer-Guide.pdf" target="_blank" rel="noopener noreferrer" style={{ ...DownloadBtn, background: '#141428', border: '1px solid #1e1e36', color: '#e8e8f0' }}>
+                ⬇ Download PDF Guide
+              </a>
+            </div>
+          </DocCard>
+
         </Section>
 
         {/* Support */}
